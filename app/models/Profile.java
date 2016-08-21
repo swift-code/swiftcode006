@@ -2,7 +2,7 @@ package models;
 
 import com.avaje.ebean.Model;
 
-import net.sf.ehcache.config.PersistenceConfiguration;
+
 
 import javax.persistence.Entity;
 
@@ -17,7 +17,7 @@ import javax.persistence.Id;
 public class Profile extends Model {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    public static Finder<Long,Profile> find = new Finder<Long,Profile>(Profile.class);
+
     public Long id;
     public String firstName;
     public String lastName;
@@ -28,5 +28,5 @@ public class Profile extends Model {
         this.firstName=firstName;
         this.lastName=lastName;
     }
-
+    public static Finder<Long,Profile> find = new Finder<Long,Profile>(Profile.class);
 }

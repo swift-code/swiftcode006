@@ -2,8 +2,8 @@ package models;
 
 import com.avaje.ebean.Model;
 import com.avaje.ebean.annotation.EnumValue;
-import com.sun.org.apache.xerces.internal.util.Status;
-import com.sun.org.apache.xpath.internal.operations.String;
+
+
 
 import javax.persistence.*;
 
@@ -12,6 +12,7 @@ import javax.persistence.*;
  */
 @Entity
 public class ConnectionRequest extends Model {
+    public static Finder<Long,ConnectionRequest> find = new Finder<Long,ConnectionRequest>(ConnectionRequest.class);
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     public Long id;
